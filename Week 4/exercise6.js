@@ -1,7 +1,10 @@
 function buttonClick() {
     const input = document.getElementById("text");
     const value = input.value;
-    alert(value);
+
+    const valueDiv = document.getElementById("value");
+    valueDiv.innerHTML = value;
+    // alert(value);
 }
 
 function load() {
