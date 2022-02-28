@@ -1,6 +1,9 @@
 function whenLoaded() {
     const element = document.getElementById("heading");
-    element.innerHTML = "Value Changed";
+    element.firstChild.nodeValue = "Value Changed";
+
+    const paragraph = document.getElementById("paragraph");
+    paragraph.firstChild.nodeValue = "Paragraph is also changed";
 }
 
-addEventListener("DOMContentLoaded", whenLoaded);
+document.addEventListener("DOMContentLoaded", whenLoaded);
