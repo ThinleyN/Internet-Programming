@@ -8,10 +8,33 @@ function opacityTimer() {
     button.style.opacity = parseFloat(button.style.opacity) - 0.01;
 }
 
-function moveButton(){
+let interval;
+function moveButton(event){
     const button = document.getElementById("circle");
-    const leftPosition = button.offsetLeft;
-    button.style.left = (leftPosition - 10) + "px";
+    if(interval){
+        clearInterval(interval)
+    }
+    if(event.keyCode === 37){
+      interval =  setInterval(function(){
+            button.style.left = (button.offsetLeft - 10) + "px";
+        },100)
+    }
+    if(event.keyCode === 38){
+        interval =  setInterval(function(){
+            button.style.top = (button.offsetTop - 10) + "px";
+        },100)
+    }
+    if(event.keyCode === 39){
+        interval =  setInterval(function(){
+            button.style.left = (button.offsetLeft + 10) + "px";
+        },100)
+    }
+    if(event.keyCode === 40) {
+        interval = setInterval(function(){
+            button.style.top = (button.offsetTop + 10) + "px";
+        },100)
+    }
+
 }
 
 function onload() {
