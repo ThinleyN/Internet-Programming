@@ -4,12 +4,11 @@ function buttonClick() {
 
     const valueDiv = document.getElementById("value");
     valueDiv.innerHTML = value;
-    // alert(value);
 }
 
 function load() {
-    const button = document.getElementById("button");
-    button.addEventListener("click",buttonClick )
+    const text = document.getElementById("text");
+    text.addEventListener("keyup",buttonClick )
 }
 
 document.addEventListener("DOMContentLoaded", load);
