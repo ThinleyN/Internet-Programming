@@ -1,5 +1,8 @@
 function buttonClick() {
-    setInterval(opacityTimer,10);
+    // setInterval(opacityTimer,10);
+    const button = document.getElementById("circle");
+    const leftPosition = button.offsetLeft;
+    button.style.left = (leftPosition - 10) + "px";
 }
 
 function opacityTimer() {
